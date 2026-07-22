@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package BSB_Input;
+
+enum Button {
+    OK = 0;
+    BACK = 1;
+    KEY_1 = 2;
+    KEY_2 = 3;
+    POWER = 4;
+    KEY_4 = 5;
+    KEY_5 = 6;
+    SW = 7;
+    DOWN = 8;
+    RIGHT = 9;
+    LEFT = 10;
+    UP = 11;
+    PTT = 12;
+}
+
+enum ButtonAction {
+    PRESS = 0;
+    RELEASE = 1;
+}
+
+message ButtonEvent {
+    Button button = 1;
+    ButtonAction action = 2;
+}

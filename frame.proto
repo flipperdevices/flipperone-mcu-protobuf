@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package Flipper_One_Frame;
+
+enum Encoding {
+    PLAIN = 0;
+    RUN_LENGTH = 1;
+    DEFLATE = 2;
+    DEFLATE_RUN_LENGTH = 3;
+}
+
+enum PixelFormat {
+    L8 = 0;
+}
+
+message Frame {
+    uint32 width = 1;
+    uint32 height = 2;
+
+    Encoding encoding = 3;
+    PixelFormat pixel_format = 4;
+
+    bytes data = 5;
+}
