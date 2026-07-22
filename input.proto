@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package BSB_Input;
+package Flipper_One_Input;
 
 enum Button {
     OK = 0;
