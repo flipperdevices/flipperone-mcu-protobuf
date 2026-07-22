@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package Flipper_One_Rpc;
+
+import "input.proto";
+import "frame.proto";
+
+message RpcMessage {
+    oneof content {
+        Flipper_One_Frame.Frame frame = 1;
+        Flipper_One_Input.ButtonEvent button_event = 2;
+    }
+}
