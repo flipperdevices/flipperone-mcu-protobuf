@@ -9,5 +9,6 @@ message RpcMessage {
     oneof content {
         Flipper_One_Frame.Frame frame = 1;
         Flipper_One_Input.ButtonEvent button_event = 2;
+        Flipper_One_Input.TouchEvent touch_event = 3;
     }
 }

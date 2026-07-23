@@ -27,3 +27,16 @@ message ButtonEvent {
     Button button = 1;
     ButtonAction action = 2;
 }
+
+enum TouchType {
+    START = 0;
+    MOVE = 1;
+    END = 2;
+}
+
+message TouchEvent {
+    TouchType type = 1;
+    uint32 x = 2;
+    uint32 y = 3;
+    uint32 pressure = 4;
+}
