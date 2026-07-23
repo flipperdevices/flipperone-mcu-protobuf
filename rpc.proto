@@ -12,6 +12,7 @@ message RpcMessage {
         Flipper_One_Input.TouchEvent touch_event = 3;
         StartVirtualDisplayRequest start_virtual_display_request = 4;
         StopVirtualDisplayRequest stop_virtual_display_request = 5;
+        RpcSessionCloseRequest rpc_session_close_request = 6;
     }
 }
 
@@ -19,4 +20,7 @@ message StartVirtualDisplayRequest {
 }
 
 message StopVirtualDisplayRequest {
+}
+
+message RpcSessionCloseRequest {
 }
