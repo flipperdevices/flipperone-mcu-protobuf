@@ -13,6 +13,8 @@ enum PixelFormat {
     L8 = 0;
 }
 
+// TODO: DO NOT renumber fields 1-5 below — rpc_screen_stream.c builds
+//       the wire-format header manually from these tags.
 message Frame {
     uint32 width = 1;
     uint32 height = 2;

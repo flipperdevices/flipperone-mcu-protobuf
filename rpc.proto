@@ -7,6 +7,8 @@ import "frame.proto";
 
 message RpcMessage {
     oneof content {
+        // TODO: DO NOT renumber this field — rpc_screen_stream.c hard-codes
+        //       it in the manual wire-format header builder.
         Flipper_One_Frame.Frame frame = 1;
         Flipper_One_Input.ButtonEvent button_event = 2;
         Flipper_One_Input.TouchEvent touch_event = 3;
