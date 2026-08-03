@@ -1,1 +1,1 @@
-# flipperone_protobuf
+# Flipper One MCU protobuf
