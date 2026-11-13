@@ -18,9 +18,17 @@ enum Button {
     PTT = 12;
 }
 
+// Mirrors InputType from the input service. PRESS and RELEASE are physical
+// events; SHORT, LONG and REPEAT are the logical ones the input service
+// derives from them for real buttons. Injected events are published as is,
+// nothing is derived on the device, so the sender has to send every event
+// the receiving code expects.
 enum ButtonAction {
     PRESS = 0;
     RELEASE = 1;
+    SHORT = 2;
+    LONG = 3;
+    REPEAT = 4;
 }
 
 message ButtonEvent {
